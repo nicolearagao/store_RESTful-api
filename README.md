@@ -9,7 +9,7 @@ Simple store CRUD API written on Flask with Sqlite database and SQLAlchemy
 
 ## Installation
 
-´´´
+```
 git clone https://github.com/nicolearagao/store_RESTful-api.git
 cd store_RESTful
 python3 -m venv venv
@@ -18,9 +18,9 @@ pip install -r requirements.txt
 python3 ./create_tables.py
 python3 ./app.py
 
-´´´
+```
 Press CTRL + C to terminate the server
-use ´´´ deactivate ´´´ to quit the virtual environment
+use ``` deactivate ``` to quit the virtual environment
 
 
 
