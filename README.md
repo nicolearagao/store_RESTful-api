@@ -43,10 +43,10 @@ python3 app.py
 
 ## Dependencies
 
-- [Flask] (https://github.com/pallets/flask)
-- [SQLAlchemy] (https://github.com/zzzeek/sqlalchemy)
-- [Flask-JWT] (https://github.com/mattupstate/flask-jwt)
-- [Flask-RESTful] (https://github.com/flask-restful/flask-restful)
+- [Flask](https://github.com/pallets/flask)
+- [SQLAlchemy](https://github.com/zzzeek/sqlalchemy)
+- [Flask-JWT](https://github.com/mattupstate/flask-jwt)
+- [Flask-RESTful](https://github.com/flask-restful/flask-restful)
 
 
 
