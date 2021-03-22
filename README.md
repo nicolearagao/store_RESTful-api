@@ -1,11 +1,27 @@
-# Store simple RESTful API
-Simple store CRUD API written on Flask with Sqlite database and SQLAlchemy
+# Store API
+
+## Summary
+Simple RESTful Flask application created with Sqlite and SQLAlchemy. The API 
 
 ## Features
 
 - user registration and JWT authentication
 - add, update and delete items from the store
 - get information about all the current items or get item info by name 
+
+## Endpoints
+
+- ### Request
+POST  /register  username and password registration 
+ ### Response 
+201 - user was created successfully
+400 - username already exists
+ 
+   
+- '/auth' - generate JWT token for registered users 
+- '/item/<string: name>' - create, read, update and delete an item by name
+- '/items' - read all the items registered in a store 
+
 
 ## Installation
 
@@ -18,7 +34,6 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 python3 ./create_tables.py
 python3 ./app.py
-
 ```
 Press CTRL + C to terminate the server or use ``` deactivate ``` to quit the virtual environment
 
@@ -27,7 +42,6 @@ Press CTRL + C to terminate the server or use ``` deactivate ``` to quit the vir
 ```
 docker build -t store-flask:1.0 .
 docker run store-flask:1.0
-
 ```
 Create the tables
 ```
