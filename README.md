@@ -14,7 +14,7 @@ Simple RESTful Flask application created with Sqlite and SQLAlchemy.
 - ### Request
 POST  /register  username and password registration 
   ### Response 
-201 user was created successfully
+201 user was created successfully<br/>
 400 username already exists
 
 - ### Request 
