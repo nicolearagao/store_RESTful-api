@@ -20,34 +20,34 @@ POST  /register  username and password registration
 - ### Request 
 POST /auth generates JWT token for registered users
   ### Response
-401 invalid credentials 
+401 invalid credentials<br/> 
 200 returns the generated access token 
 
 - ### Request 
 GET /item/<string:name> get item by name, requires a JWT token 
   ### Response
-404 Item not found
-200 returns the item
+404 Item not found<br/>
+200 returns the item<br/>
 401 invalid credentials - request does not have an access token 
 
 - ### Request 
 POST /<string:name> post a new item, requires a name and a price 
   ### Response
-400 Item with that name already exists
-201 return the item, post successful
-402 price can't be left blank 
+400 Item with that name already exists<br/>
+201 return the item, post successful<br/>
+402 price can't be left blank<br/> 
 500 an error occurred inserting the item into the database
 
 - ### Request 
 DELETE /item/<string:name> delete an item 
   ### Response
-404 item not found 
+404 item not found<br/> 
 200 item deleted successfully
 
 - ### Request 
 PUT /item/<string:name> update an item if it already exists, if not creates it 
   ### Response
-200 returns item created or updated 
+200 returns item created or updated<br/> 
 400 price field cannot be left blank 
 
 - ### Request 
