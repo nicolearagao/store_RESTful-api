@@ -73,6 +73,8 @@ Press CTRL + C to terminate the server or use ``` deactivate ``` to quit the vir
 ### Run with Docker
 
 ```
+git clone https://github.com/nicolearagao/store_RESTful-api.git
+cd store_RESTful/code
 docker build -t store-flask:1.0 .
 docker run store-flask:1.0
 ```

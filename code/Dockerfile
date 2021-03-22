@@ -6,4 +6,4 @@ WORKDIR /web
 RUN pip install --upgrade pip
 RUN pip install -r ./requirements.txt
 ENTRYPOINT ["python3"]
-CMD ["create_tables.py", "app.py"]
+CMD ["app.py"]
