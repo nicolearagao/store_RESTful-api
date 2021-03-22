@@ -3,6 +3,20 @@
 ## Summary
 Simple RESTful Flask application created with Sqlite and SQLAlchemy.
 
+## Installation
+
+### Run with Docker
+
+```
+git clone https://github.com/nicolearagao/store_RESTful-api.git
+cd store_RESTful-api/code
+docker build -t store-flask:1.0 .
+docker run -d -p 5000:5000 flask-store
+```
+
+The server will be up on ```http://0.0.0.0:5000```
+
+
 ## Features
 
 - user registration and JWT authentication
@@ -31,7 +45,7 @@ GET /item/<string:name> get item by name, requires a JWT token
 401 invalid credentials - request does not have an access token 
 
 - ### Request 
-POST /<string:name> post a new item, requires a name and a price 
+POST /item/<string:name> post a new item, requires a name and a price 
   ### Response
 400 Item with that name already exists<br/>
 201 return the item, post successful<br/>
@@ -56,46 +70,13 @@ GET /items return a list of all the items of the store
 200 returns all the items of the store or a blank list 
 
 
-## Installation
-
-### Virtual environment
-```
-git clone https://github.com/nicolearagao/store_RESTful-api.git
-cd store_RESTful
-python3 -m venv venv
-source ./venv/bin/activate
-pip install -r requirements.txt
-python3 ./create_tables.py
-python3 ./app.py
-```
-Press CTRL + C to terminate the server or use ``` deactivate ``` to quit the virtual environment
-
-### Run with Docker
-
-```
-git clone https://github.com/nicolearagao/store_RESTful-api.git
-cd store_RESTful/code
-docker build -t store-flask:1.0 .
-docker run store-flask:1.0
-```
-Create the tables
-```
-python3 create_tables.py
-
-```
-Start the server
-
-```
-python3 app.py
-
-```
-
 ## Dependencies
 
 - [Flask](https://github.com/pallets/flask)
 - [SQLAlchemy](https://github.com/zzzeek/sqlalchemy)
 - [Flask-JWT](https://github.com/mattupstate/flask-jwt)
 - [Flask-RESTful](https://github.com/flask-restful/flask-restful)
+- [Flask-SQLAlchemy](https://github.com/pallets/flask-sqlalchemy)
 
 
 
